@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- print all the words with more then 3 letters -->
+    <button id="string" onclick="letters_3()">HERE</button>
+    <button onclick="sum_()">HERE2</button>
+    <button onclick="numlet_()">HERE3</button>
+    <button onclick="arr2_()">HERE4</button>
+    <button onclick="arr3_()">HERE5</button>
+    <script>
+        let ar = ["dog", "cat", "monkey", "snake", "zebra", "giraffe", "dog"]
+        function letters_3() {
+            for (let index = 0; index < ar.length; index++) {
+                if (ar[index].length > 3) {
+                    console.log(ar[index]);
+
+                }
+
+
+            }
+
+        }
+        // the amout of all the letters in the string
+        function sum_() {
+            sum = 0
+            for (let index = 0; index < ar.length; index++) {
+                sum += ar[index].length
+
+            } console.log(sum);
+        }
+        // how many times a word showing in the string
+        function word_(ar, dog) {
+            let count = 0;
+            for (let index = 0; index < ar.length; index++) {
+                if (ar[index] == 'dog') {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        const count = word_(ar, "dog");
+        console.log(`The word 'dog' appears ${count} times in the array.`);
+
+        // number and words amount of all the numbers
+        function numlet_() {
+            sum = 0
+            let arr = ["dog", 80, "monkey", 15, "zebra", 10, "dog"]
+            for (let index = 0; index < arr.length; index++) {
+                if (typeof arr[index] === 'number') {
+                    sum += arr[index];
+
+
+                }
+
+
+            } console.log(sum);
+            // average of numbers
+        }
+        function average_() {
+            let arr2 = [2, 8, 6, 15, 20, 10, 11]
+            let sum = 0
+            for (let index = 0; index < arr2.length; index++) {
+                sum += arr2[index];
+
+
+
+            }
+            let avg = sum / arr2.length;
+            return avg;
+            // min - max values of numbers
+        } console.log(average_());
+
+        function arr2_() {
+
+            let arr2 = [2, 8, 6, 15, 20, 10, 11]
+            let min = arr2[0];
+            let max = arr2[0];
+
+            for (let index = 1; index < arr2.length; index++) {
+                if (arr2[index] < min) {
+                    min = arr2[index];
+                }
+                if (arr2[index] > max) {
+                    max = arr2[index];
+                }
+
+            }
+            console.log(`The lowest number is ${min}`);
+            console.log(`The highest number is ${max}`);
+            // sum of all the numbers below 7
+        }
+        function arr3_() {
+            let arr2 = [2, 8, 6, 5, 11, 4, 12]
+            let sum = 0
+            for (let index = 0; index < arr2.length; index++) {
+                if (arr2[index] < 7) {
+                    sum += arr2[index];
+
+                }
+
+            }
+            console.log(sum);
+
+
+        }
+    </script>
+</body>
+
+</html>
